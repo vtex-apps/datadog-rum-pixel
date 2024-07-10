@@ -1,7 +1,7 @@
 {
   "name": "datadog-rum-pixel",
   "vendor": "vtex",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "title": "Datadog RUM Pixel App",
   "description": "Datadog RUM Pixel App",
   "scripts": {
