@@ -1,0 +1,116 @@
+{
+  "name": "datadog-rum-pixel",
+  "vendor": "vtex",
+  "version": "0.0.1",
+  "title": "Datadog RUM Pixel App",
+  "description": "Datadog RUM Pixel App",
+  "scripts": {
+    "postreleasy": "vtex publish --verbose"
+  },
+  "billingOptions": {
+    "termsURL": "https://compliance.vtex.com/gdpr/policies/vtex-privacy-policy",
+    "support": {
+      "url": "https://support.vtex.com/hc/requests"
+    },
+    "free": true,
+    "type": "free",
+    "availableCountries": [
+      "*"
+    ]
+  },
+  "builders": {
+    "react": "3.x",
+    "store": "0.x",
+    "pixel": "0.x",
+    "docs": "0.x"
+  },
+  "dependencies": {
+    "vtex.pixel-interfaces": "1.x"
+  },
+  "policies": [
+    {
+      "name": "pixel"
+    }
+  ],
+  "settingsSchema": {
+    "title": "Datadog RUM Pixel",
+    "type": "object",
+    "description": "For more information abour configuring your Datadog RUM Pixel, see https://docs.datadoghq.com/real_user_monitoring/browser/setup/",
+    "bindingBounded": true,
+    "properties": {
+      "applicationId": {
+        "title": "Datadog applicationId",
+        "description": "Enter the Application ID from your Datadog RUM Application, the Applicatiion ID should be something like 'b64882ae-821c-4e3a-a6a8-1b438b4af7f3'",
+        "type": "string"
+      },
+      "clientToken": {
+        "title": "Datadog clientToken",
+        "description": "Enter the Client Token from your Datadog RUM Application, the Client Token should be something like 'pubblictoken'",
+        "type": "string"
+      },
+      "site": {
+        "title": "Datadog Site",
+        "description": "Enter the Datadog site name, see https://docs.datadoghq.com/getting_started/site/ for more information on how to get yours",
+        "type": "string"
+      },
+      "service": {
+        "title": "Datadog Service (Application name)",
+        "description": "Enter the Datadog service name, this will be used to identify the application in Datadog RUM. This is commonly the application name that you created in Datadog",
+        "type": "string"
+      },
+      "version": {
+        "title": "App Version",
+        "description": "Enter a version of you application (store), this will be used to identify the application version in Datadog RUM",
+        "type": "string"
+      },
+      "sessionSampleRate": {
+        "title": "Session Sample Rate",
+        "description": "Enter the sample rate for the RUM pixel, this will be used to control the amount of data sent to Datadog RUM",
+        "type": "number",
+        "default": 100
+      },
+      "sessionReplaySampleRate": {
+        "title": "Session Replay Sample Rate",
+        "description": "Enter the sample rate for the RUM pixel for session replays, this will be used to control the amount of data sent to Datadog RUM",
+        "type": "number",
+        "default": 20
+      },
+      "trackUserInteractions": {
+        "title": "Track User Interactions",
+        "description": "Enable or disable tracking of user interactions in the RUM pixel",
+        "type": "boolean",
+        "default": true
+      },
+      "trackResources": {
+        "title": "Track Resources",
+        "description": "Enable or disable tracking of resources (images, scripts, etc) in the RUM pixel",
+        "type": "boolean",
+        "default": true
+      },
+      "trackLongTasks": {
+        "title": "Track Long Tasks",
+        "description": "Enable or disable tracking of long tasks in the RUM pixel",
+        "type": "boolean",
+        "default": true
+      },
+      "defaultPrivacyLevel": {
+        "title": "Default Privacy Level",
+        "description": "Enter the default privacy level for the RUM pixel, this will be used to control the amount of data sent to Datadog RUM",
+        "type": "string",
+        "enum": [
+          "allow",
+          "mask",
+          "mask-user-input"
+        ],
+        "default": "mask-user-input"
+      },
+      "activateInDev": {
+        "title": "Activate in Dev Mode",
+        "description": "Enable or disable the RUM pixel in development mode (myvtex)",
+        "type": "boolean",
+        "default": false
+      }
+    }
+  },
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
+}

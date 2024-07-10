@@ -1,0 +1,15 @@
+{
+  "name": "Datadog RUM",
+  "headline": "Integrate your store with Datadog Real User Monitor",
+  "overview": "Datadog Real User Monitoring (RUM) provides deep insight into your application's frontend performance. Monitor real user data in order to optimize your web performance and provide exceptional user experiences.",
+  "features": [
+    "Configure Datadog Real User Monitor using the VTEX admin panel",
+    "Track user interactions and performance metrics",
+    "Monitor real user data to optimize web performance"
+  ],
+  "additionalInformation": "For more information about configuring your Datadog RUM Pixel, see the [Datadog documentation](https://docs.datadoghq.com/real_user_monitoring/browser/setup/)",
+  "websiteURL": "https://vtex.com/",
+  "support": {
+    "url": "https://support.vtex.com/hc/requests"
+  }
+}

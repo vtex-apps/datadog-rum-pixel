@@ -1,0 +1,31 @@
+<script>
+  (function () {
+    var applicationId = "{{ settings.applicationId }}"
+    var clientToken = "{{ settings.clientToken }}"
+    var site = "{{ settings.site }}"
+    var service = "{{ settings.service }}"
+    var version = "{{ settings.version }}"
+    var sessionSampleRate = "{{ settings.sessionSampleRate }}"
+    var sessionReplaySampleRate = "{{ settings.sessionReplaySampleRate }}"
+    var trackUserInteractions = "{{ settings.trackUserInteractions }}"
+    var trackResources = "{{ settings.trackResources }}"
+    var trackLongTasks = "{{ settings.trackLongTasks }}"
+    var defaultPrivacyLevel = "{{ settings.defaultPrivacyLevel }}"
+    var activateInDev = "{{ settings.activateInDev }}"
+
+    window.__DD_RUM_PIXEL__ = {
+      applicationId,
+      clientToken,
+      site,
+      service,
+      version,
+      sessionSampleRate,
+      sessionReplaySampleRate,
+      trackUserInteractions,
+      trackResources,
+      trackLongTasks,
+      defaultPrivacyLevel,
+      activateInDev
+    }
+  })()
+</script>
